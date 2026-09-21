@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create an App on App Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="panel form-panel">
+        <div class="panel-header">
+          <p class="eyebrow">App Metadata</p>
+          <h1>Create an App on App Store</h1>
+        </div>
+
+        <form id="appForm" class="app-form">
+          <div class="field-grid">
+            <label class="field">
+              <span>App Name</span>
+              <input id="appName" name="appName" type="text" value="Animal Sounds" />
+            </label>
+
+            <label class="field">
+              <span>Bundle ID</span>
+              <input id="bundleId" name="bundleId" type="text" value="com.smartbabyapps.animalsounds" />
+            </label>
+
+            <label class="field">
+              <span>Version</span>
+              <input id="version" name="version" type="text" value="2.0" />
+            </label>
+
+            <label class="field">
+              <span>Platform</span>
+              <select id="platform" name="platform">
+                <option value="iOS" selected>iOS</option>
+                <option value="macOS">macOS</option>
+                <option value="tvOS">tvOS</option>
+                <option value="watchOS">watchOS</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Minimum OS</span>
+              <input id="minimumOS" name="minimumOS" type="text" value="3.1" />
+            </label>
+
+            <label class="field">
+              <span>IPA filename</span>
+              <input id="ipaFilename" name="ipaFilename" type="text" value="Animal Sounds 2.0.ipa" />
+            </label>
+
+            <label class="field">
+              <span>File Size</span>
+              <input id="fileSize" name="fileSize" type="text" value="798.3 MB" />
+            </label>
+
+            <label class="field">
+              <span>App Bundle Path</span>
+              <input id="appBundlePath" name="appBundlePath" type="text" value="Payload/Animal Sounds.app" />
+            </label>
+
+            <label class="field field-full">
+              <span>Archive Type</span>
+              <select id="archiveType" name="archiveType">
+                <option value="ZIP-based iOS IPA archive" selected>ZIP-based iOS IPA archive</option>
+                <option value="Plain ZIP archive">Plain ZIP archive</option>
+                <option value="App Store package">App Store package</option>
+                <option value="Signed IPA archive">Signed IPA archive</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="preview-toolbar">
+          <div>
+            <p class="eyebrow">Live Preview</p>
+            <h2>App Information</h2>
+          </div>
+          <button id="downloadZip" type="button" class="download-button">Download ZIP</button>
+        </div>
+
+        <div id="appPreview" class="preview-card" aria-live="polite">
+          <div class="preview-row"><span class="label">App Name</span><span id="previewAppName" class="value">Animal Sounds</span></div>
+          <div class="preview-row"><span class="label">Bundle ID</span><span id="previewBundleId" class="value">com.smartbabyapps.animalsounds</span></div>
+          <div class="preview-row"><span class="label">Version</span><span id="previewVersion" class="value">2.0</span></div>
+          <div class="preview-row"><span class="label">Platform</span><span id="previewPlatform" class="value">iOS</span></div>
+          <div class="preview-row"><span class="label">Minimum OS</span><span id="previewMinimumOS" class="value">3.1</span></div>
+          <div class="preview-row"><span class="label">IPA filename</span><span id="previewIpaFilename" class="value">Animal Sounds 2.0.ipa</span></div>
+          <div class="preview-row"><span class="label">File Size</span><span id="previewFileSize" class="value">798.3 MB</span></div>
+          <div class="preview-row"><span class="label">App Bundle Path</span><span id="previewAppBundlePath" class="value">Payload/Animal Sounds.app</span></div>
+          <div class="preview-row"><span class="label">Archive Type</span><span id="previewArchiveType" class="value">ZIP-based iOS IPA archive</span></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
